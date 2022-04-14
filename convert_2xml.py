@@ -6,10 +6,10 @@ def fun(x):
     x = x.split(',')
     return str(int(float(x[0])))+','+str(int(float(x[1])))
 
-imgroot = 'D:/test_data/power-box-reading-and-ocr/electric_box20210413_test_data/img/'
-xmlpath = 'D:/test_data/power-box-reading-and-ocr/electric_box20210413_test_data/electric_box20210413_test_data.xml'
+imgroot = 'D:\sot\XSfjdc\img'
+xmlpath = 'D:\sot\XSfjdc\XSnon_vehicles20201230test_data.XML'
 
-savepath = 'D:/test_data/power-box-reading-and-ocr/electric_box20210413_test_data/img/'
+savepath = 'D:/sot/Sfjdc/data'
 if os.path.exists(savepath):
     shutil.rmtree(savepath)
 os.makedirs(savepath)
