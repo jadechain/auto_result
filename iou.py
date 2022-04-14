@@ -28,21 +28,21 @@ def compute_iou(rec1, rec2):
 
 
 def compute_iou2(rec1, rec2):
-    areas1 = (rec1[3] - rec1[1]) * (rec1[2] - rec1[0])
-    areas2 = (rec2[3] - rec2[1]) * (rec2[2] - rec2[0])
-    left = max(rec1[1], rec2[1])
-    right = min(rec1[3], rec2[3])
-    top = max(rec1[0], rec2[0])
-    bottom = min(rec1[2], rec2[2])
+    areas1 = (int(rec1[3]) - int(rec1[1])) * (int(rec1[2]) - int(rec1[0]))
+    areas2 = (int(rec2[3]) - int(rec2[1])) * (int(rec2[2]) - int(rec2[0]))
+    left = max(int(rec1[1]), int(rec2[1]))
+    right = min(int(rec1[3]), int(rec2[3]))
+    top = max(int(rec1[0]), int(rec2[0]))
+    bottom = min(int(rec1[2]), int(rec2[2]))
     w = max(0, right - left)
     h = max(0, bottom - top)
     return w * h / (areas2 + areas1 - w * h)
 
 
 if __name__ == '__main__':
-    rect1 = [1469, 419, 43, 50]
+    rect1 = [182, 120, 1041, 476]
     # (top, left, bottom, right)
-    rect2 = [1824, 180, 1041, 476]
+    rect2 = [182, 180, 1041, 476]
 
     iou = compute_iou(rect2, rect1)
     print(iou)
