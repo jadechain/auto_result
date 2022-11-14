@@ -55,8 +55,10 @@ def model_rectangle(label, file):
             print(tuple(map(int, i['points'][1][:])), tuple(map(int, i['points'][1][:])))
     return 'success'
 
+def re_test():
+    return 0
 
-print(full_rectangle('LSP4306115959045P0055_LSP4306115959045P0056_20220801094114_Img3.jpg', 'D9101'))
-print(single_rectangle(pt_top, pt_bottom, (0, 255, 0)))
-model_rectangle('lianxi/D9101',
-                'D:/Users/chenyulian/Desktop/vs/data/guanjie/9856P0A-PLTVLQ321XAHC-AA0/9856P0A-PLTVLQ321XAHC-AA0/Img3.json')
+# print(full_rectangle('LSP4306115959045P0055_LSP4306115959045P0056_20220801094114_Img3.jpg', 'D9101'))
+# print(single_rectangle(pt_top, pt_bottom, (0, 255, 0)))
+# model_rectangle('lianxi/D9101',
+#                 'D:/Users/chenyulian/Desktop/vs/data/guanjie/9856P0A-PLTVLQ321XAHC-AA0/9856P0A-PLTVLQ321XAHC-AA0/Img3.json')
